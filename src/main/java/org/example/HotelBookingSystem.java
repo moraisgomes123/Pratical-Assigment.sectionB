@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class HotelBookingSystem {
     public static void main(String[] args) {
+        // Here we’re creating an array of 6 rooms: 2 single, 2 double, 2 suites.
         Room[] rooms = new Room[6];
         rooms[0] = new SingleRoom(101);
         rooms[1] = new SingleRoom(102);
@@ -15,6 +16,7 @@ public class HotelBookingSystem {
         Scanner scanner = new Scanner(System.in);
         int choice;
 
+        // This loop keeps running until the user chooses option 4 (Exit).
         do {
             System.out.println("\n--- Hotel Booking System ---");
             System.out.println("1. Display Rooms");
@@ -23,8 +25,9 @@ public class HotelBookingSystem {
             System.out.println("4. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine();
 
+            // Menu handling
             switch (choice) {
                 case 1:
                     displayRooms(rooms);
@@ -53,6 +56,7 @@ public class HotelBookingSystem {
         scanner.close();
     }
 
+    // Displays all rooms with their number, type, and either the customer’s name or "Available".
     public static void displayRooms(Room[] rooms) {
         System.out.println("\nRoom Report:");
         System.out.printf("%-10s %-10s %-20s\n", "Room No", "Type", "Customer");
@@ -66,6 +70,7 @@ public class HotelBookingSystem {
         }
     }
 
+    // Books a room if it exists and is not already booked.
     public static void bookRoom(Room[] rooms, int roomNumber, String customerName) {
         for (Room r : rooms) {
             if (r != null && r.getRoomNumber() == roomNumber) {
@@ -81,6 +86,7 @@ public class HotelBookingSystem {
         System.out.println("Room not found!");
     }
 
+    // Cancels a booking if the room exists and is currently booked.
     public static void cancelBooking(Room[] rooms, int roomNumber) {
         for (Room r : rooms) {
             if (r != null && r.getRoomNumber() == roomNumber) {
@@ -96,3 +102,4 @@ public class HotelBookingSystem {
         System.out.println("Room not found!");
     }
 }
+
