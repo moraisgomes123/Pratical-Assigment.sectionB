@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 public class HotelBookingSystemTest {
     private Room[] rooms;
-
+// Assisted by DeepSeek AI for structure and implementation guidance
     @BeforeEach
     public void setUp() {
         rooms = new Room[3];
@@ -16,7 +16,7 @@ public class HotelBookingSystemTest {
         rooms[1] = new DoubleRoom(201);
         rooms[2] = new SuiteRoom(301);
     }
-
+// Assisted by DeepSeek AI for structure and implementation guidance
     @Test
     public void testBookRoomSuccessfully() {
         HotelBookingSystem.bookRoom(rooms, 101, "Alice");
@@ -30,7 +30,7 @@ public class HotelBookingSystemTest {
         HotelBookingSystem.bookRoom(rooms, 201, "Charlie");
         assertEquals("Bob", rooms[1].getCustomerName(), "Booking should not overwrite existing customer");
     }
-
+// Assisted by DeepSeek AI for structure and implementation guidance
     @Test
     public void testCancelBooking() {
         HotelBookingSystem.bookRoom(rooms, 301, "David");
