@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class HotelBookingSystem {
     public static void main(String[] args) {
-        // Here we’re creating an array of 6 rooms: 2 single, 2 double, 2 suites.
+        // creating an array
         Room[] rooms = new Room[6];
         rooms[0] = new SingleRoom(101);
         rooms[1] = new SingleRoom(102);
