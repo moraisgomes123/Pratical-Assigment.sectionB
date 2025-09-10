@@ -16,7 +16,6 @@ public class HotelBookingSystem {
         Scanner scanner = new Scanner(System.in);
         int choice;
 
-        // This loop keeps running until the user chooses option 4 (Exit).
         do {
             System.out.println("\n--- Hotel Booking System ---");
             System.out.println("1. Display Rooms");
