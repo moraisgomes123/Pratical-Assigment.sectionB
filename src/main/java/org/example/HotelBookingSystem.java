@@ -56,7 +56,6 @@ public class HotelBookingSystem {
     }
 
     // Displays all rooms with their number, type, and either the customer’s name or "Available".
-    // Assisted by DeepSeek AI for structure and implementation guidance
     public static void displayRooms(Room[] rooms) {
         System.out.println("\nRoom Report:");
         System.out.printf("%-10s %-10s %-20s\n", "Room No", "Type", "Customer");
@@ -71,7 +70,6 @@ public class HotelBookingSystem {
     }
 
     // Books a room if it exists and is not already booked.
-    // Assisted by DeepSeek AI for structure and implementation guidance
     public static void bookRoom(Room[] rooms, int roomNumber, String customerName) {
         for (Room r : rooms) {
             if (r != null && r.getRoomNumber() == roomNumber) {
@@ -88,7 +86,6 @@ public class HotelBookingSystem {
     }
 
     // Cancels a booking if the room exists and is currently booked.
-    // Assisted by DeepSeek AI for structure and implementation guidance
     public static void cancelBooking(Room[] rooms, int roomNumber) {
         for (Room r : rooms) {
             if (r != null && r.getRoomNumber() == roomNumber) {
