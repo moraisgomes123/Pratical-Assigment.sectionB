@@ -1,19 +1,18 @@
 package org.example;
 
 public class Room {
-    // Each room has a unique number, a status (booked or not), and an optional customer name.
     private int roomNumber;
     private boolean isBooked;
     private String customerName;
 
-    // Constructor: when a room is created, it starts as "not booked" with no customer.
+    // Constructor
     public Room(int roomNumber) {
         this.roomNumber = roomNumber;
         this.isBooked = false;
         this.customerName = "";
     }
 
-    // --- Getters and methods for room management ---
+    //Getters and methods for room management
 
     public int getRoomNumber() {
         return roomNumber;
